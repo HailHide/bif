@@ -1,81 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@font-face {
-    font-family: 'awesome';
-    src: url('../fonts/awesome_free_font-webfont.woff2') format('woff2'),
-         url('../fonts/awesome/awesome_free_font-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'chomsky';
-    src: url('../fonts/chomsky-webfont.woff2') format('woff2'),
-         url('../fonts/chomsky-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'futura';
-    src: url('../fonts/futurab-webfont.woff2') format('woff2'),
-         url('../fonts/futurab-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
 /* Navbar */
 .navbar {
-    background-color: #5a189a;
+    background-color: #632c65;
     display: flex !important;
     height: 42px;
 }
@@ -104,39 +29,76 @@ a .nav-link {
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
                  0px 8px 13px rgba(0,0,0,0.1),
                  0px 18px 23px rgba(0,0,0,0.1);
-    border-color: #8cba80;
-    color: #8cba80;
-    box-shadow: 0 0.5em 0.5em -0.4em #8cba80;
+    border-color: #da5de2;
+    color: #da5de2;
+    box-shadow: 0 0.5em 0.5em -0.4em #da5de2;
     transform: translateY(-0.25em);
     cursor: pointer;
 }
 /* ./Navbar */
-
-/* Main Section */
-#hero {
-    display: flex ;
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100%;
-    background: url('../img/1.jpg');
-}
-.wrapper {
-    width: 960px;
-    margin: 0 auto;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.mode-container {
+.quotes {
+    width: 80vw;
+    min-height: 400px;
     display: flex;
-    justify-content: space-evenly;
-}
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+}  
+.quotes .box {
+    position: relative;
+    width: 25vw;
+    height: 50vh;
+    min-height: 320px;
+    background: #f2f2f2;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);
+}  
+.quotes .box::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    pointer-events: none;
+}  
+.quotes .box::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: 5%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    filter: invert(1);
+    pointer-events: none;
+}  
 .mode {
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-right: 1px solid black;
 }
 .mode h2 {
     font-family: 'futura', sans-serif;
@@ -146,7 +108,6 @@ a .nav-link {
     font-size: 2em;
     margin-bottom: 7px;
 }
-
 .mode h3 {
     font-family: 'Poppins', sans-serif;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
@@ -156,7 +117,6 @@ a .nav-link {
     font-weight: 400;
     margin-bottom: 7px;
 }
-
 .mode p {
     padding-top: .3rem;
     font-family: 'Lato', sans-serif;
@@ -165,17 +125,52 @@ a .nav-link {
                  0px 18px 23px rgba(0,0,0,0.1);
     font-size: 1.125em;
 }
-
-.mode:last-of-type {
-    border-right: none;
+  
+.quotes .box:hover {
+    color: #f2f2f2;
+    box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
 }
-#card_1 {
-    background-color: rgba(149,167,141,.7);
+  
+.quotes .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    pointer-events: none;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
 }
-#card_2 {
-    background-color: rgba(189,137,126,.7);
+  
+.quotes .box.box1:hover,
+ .quotes .box.box1:hover~.bg {
+    opacity: 1;
+    background: #e2a9e5;
+    background: -moz-linear-gradient(-45deg, #e2a9e5 15%, #2b94e5 100%);
+    background: -webkit-linear-gradient(-45deg, #e2a9e5 15%,#2b94e5 100%);
+    background: linear-gradient(135deg, #e2a9e5 15%,#2b94e5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a9e5', endColorstr='#2b94e5',GradientType=1 );
 }
-#card_3 {
-    background-color: rgba(248,118,102,.7);
+  
+.quotes .box.box2:hover,
+.quotes .box.box2:hover~.bg {
+    opacity: 1;
+    background: #632c65;
+    background: -moz-linear-gradient(-45deg, #632c65 15%, #56a5e2 100%);
+    background: -webkit-linear-gradient(-45deg, #632c65 15%,#56a5e2 100%);
+    background: linear-gradient(135deg, #632c65 15%,#56a5e2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
+  }
+  
+  .quotes .box.box3:hover,
+  .quotes .box.box3:hover~.bg {
+    opacity: 1;
+    background: #4b384c;
+    background: -moz-linear-gradient(-45deg, #4b384c 15%, #da5de2 100%);
+    background: -webkit-linear-gradient(-45deg, #4b384c 15%,#da5de2 100%);
+    background: linear-gradient(135deg, #4b384c 15%,#da5de2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
 }
-/* ./Main Section */
+  
