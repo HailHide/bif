@@ -1,4 +1,76 @@
+@font-face {
+    font-family: 'awesome';
+    src: url('../fonts/awesome_free_font-webfont.woff2') format('woff2'),
+         url('../fonts/awesome/awesome_free_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'chomsky';
+    src: url('../fonts/chomsky-webfont.woff2') format('woff2'),
+         url('../fonts/chomsky-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'futura';
+    src: url('../fonts/futurab-webfont.woff2') format('woff2'),
+         url('../fonts/futurab-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* Navbar */
 .navbar {
     background-color: #5a189a;
     display: flex !important;
+    height: 42px;
 }
+.navbar-brand {
+    font-family: 'futura', sans-serif;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.5),
+                 0px 8px 13px rgba(0,0,0,0.2),
+                 0px 18px 23px rgba(0,0,0,0.2);
+    font-size: 21px;
+    
+}
+/* ./Navbar */
+
+/* Main Section */
+#hero {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: url('img/1.jpg');
+}
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.mode-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.mode {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+}
+.mode h2 {
+    font-family: 'futura', sans-serif;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+.mode:last-of-type {
+    border-right: none;
+}
+/* ./Main Section */
